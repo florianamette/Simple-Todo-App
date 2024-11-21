@@ -2,9 +2,12 @@
 const todoInput = document.getElementById('todo-input'); // Input field where the user types the task
 const addBtn = document.getElementById('add-btn'); // Button to add a new task
 const todoList = document.getElementById('todo-list'); // The unordered list (<ul>) that holds all tasks
-
+let counter = 0;
 // Function to add a new task
 const addTask = () => {
+    if counter > 10:
+        alert('You have reached the maximum number of tasks');
+        return;
     // Get the text entered in the input field and remove unnecessary spaces
     const taskText = todoInput.value.trim();
 
@@ -46,6 +49,7 @@ const addTask = () => {
     deleteBtn.addEventListener('click', () => {
         // Remove the entire <li> (task) when the delete button is clicked
         taskItem.remove();
+        counter--;
     });
 
     // Append the checkbox, task text, and delete button to the task item (<li>)
@@ -58,6 +62,8 @@ const addTask = () => {
 
     // Clear the input field to prepare for the next task
     todoInput.value = '';
+
+    counter++;
 };
 
 // Event listener for the "Add" button
