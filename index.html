@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script defer src="app.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+<div class="bg-white rounded-lg shadow-lg w-96 p-6">
+    <h1 class="text-2xl font-bold text-gray-800 mb-4">To-Do App</h1>
+
+    <!-- Input Field -->
+    <div class="flex mb-4">
+        <input
+                id="todo-input"
+                type="text"
+                class="flex-grow border rounded-lg px-3 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                placeholder="Add a new task"
+        />
+        <button
+                id="add-btn"
+                class="ml-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg px-4 py-2"
+        >
+            Add
+        </button>
+    </div>
+
+    <!-- To-Do List -->
+    <ul id="todo-list" class="space-y-2"></ul>
+</div>
+</body>
+</html>
